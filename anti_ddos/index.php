@@ -1,6 +1,7 @@
 <?php
 /*
-Posted @ http://www.w3tools.info/2011/12/anti-ddos-php-script.html
+index.php (This is the file you need to include at the head of the page you want to protect)
+Posted By Sanix darker
 */
  
  $ad_ddos_query = 2;// ​​number of requests per second to detect DDOS attacks
