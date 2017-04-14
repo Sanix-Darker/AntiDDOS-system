@@ -32,7 +32,7 @@ Posted By Sanix Darker
 		 $ad_string = $ad_ip.',';
 		 fputs($ad_file, "$ad_string");
 		 fclose($ad_file); 
-		 $array_for_nom = array('maN','bZ','E','S','i','P','u','1','4','Ds','Er','FtGy','A','d','98','z1sW');
+		 $array_for_nom = array('maNsd','bsd32Z','Efvfd','S','sdfsdi','45P','safu','1sfg','4d','Ds','Er','FtGy','fd54A','d','98','z1sW');
 		 $nom_form = $array_for_nom[rand(0,15)].$array_for_nom[rand(0,15)].$array_for_nom[rand(0,15)].$array_for_nom[rand(0,15)].$array_for_nom[rand(0,15)]; 
 		 $_SESSION['variable_du_form'] = str_shuffle($nom_form).$array_for_nom[rand(0,15)].$array_for_nom[rand(0,15)];
 		 ?>
