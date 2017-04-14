@@ -5,8 +5,10 @@ A simple way to protect your web site from DDOS attack
 In your webpage(for example produits.php or index.php), you just have to include the file index.php from anti_ddos:<br>
 <hr>
 <.?php <br>
-    session_start();// NEver forget this line<br>
-    include ("anti_ddos/index.php"); //Systeme de protection DDOS</br>
+
+  &nbsp; &nbsp; session_start();// NEver forget this line<br>
+
+  &nbsp; &nbsp; include ("anti_ddos/index.php"); //Include file here!</br>
 ?><br>
 <.!DOCTYPE html><br>
 <.html><br>
