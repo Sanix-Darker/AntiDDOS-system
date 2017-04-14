@@ -19,7 +19,7 @@ Posted By Sanix Darker
  
  $ad_source = file("{$ad_dir}/{$ad_black_file}");
  $ad_source = explode(',', implode(',',$ad_source));
- if(in_array($ad_ip, $ad_source)) {die('<br><br><center><h3>Systeme de protection DDOS de JeBiss activ&eacute;!</h3>');}
+ if(in_array($ad_ip, $ad_source)) {die('<br><br><center><h3>Systeme de protection DDOS activ&eacute;!</h3>');}
  
  $ad_source = file("{$ad_dir}/{$ad_white_file}");
  $ad_source = explode(',',implode(',',$ad_source));
