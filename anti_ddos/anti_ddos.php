@@ -1,9 +1,9 @@
 <?php
 /*
 Anti DDOS PHP Script
-Posted @ http://www.w3tools.info/2011/12/anti-ddos-php-script.html
+Posted By Sanix Darker
 */
-//and getenv(" HTTP_CLIENT_IP ") != '127.0.0.1'
+//and getenv(" HTTP_CLIENT_IP ") != '127.0.0.1' this is a way if you are working on localhost oubien wamp
 //and getenv(" HTTP_X_FORWARDED_FOR") != '127.0.0.1'
  function getIP() {
 	 if(getenv("HTTP_CLIENT_IP") and preg_match("/^[ 0-9 \ .]*?[ 0-9 \ .]+$/ is ", getenv(" HTTP_CLIENT_IP "))) {
@@ -58,7 +58,7 @@ Posted @ http://www.w3tools.info/2011/12/anti-ddos-php-script.html
 			}
 		</style>
 		<nav><center>
-			<h3>Systeme de protection DDOS de JeBiss, si vous n'etes pas un robot clickez sur ce bouton!</h3>
+			<h3>Systeme de protection DDOS By Sd, si vous n'etes pas un robot clickez sur ce bouton!</h3>
 			<form method="post" name="<?=$nom_form; ?>">
 				<input type="hidden" name="<?=$_SESSION['variable_du_form']; ?>" value="JnYHSNp"><br>
 				<input type="button" class="clickmoi" onclick="go()" value="Click Moi!">
