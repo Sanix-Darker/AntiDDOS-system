@@ -1,5 +1,5 @@
 # AntiDDOS-system
-A simple way to protect your web site from DDOS attack
+A simple way to protect your web site from DDOS attack(FREELY)
 
 <h4> How to use it!</h4>
 In your webpage(for example produits.php or index.php), you just have to include the file index.php from anti_ddos:<br>
@@ -30,4 +30,5 @@ In your webpage(for example produits.php or index.php), you just have to include
   &nbsp; &nbsp; <./body><br>
 <./html><br>
 
-NB:Remove the "." in the begining of tags, all br tags and nbsp code before use it!!!
+NB:Remove the "." in the begining of tags, all br tags and nbsp code before use it!!!<br>
+<img src="ddos.PNG">
