@@ -1,0 +1,19 @@
+.container{
+	margin-top: 200px;
+	max-width: 450px;
+	text-align: center;
+	padding: 10px;
+	padding-top: 25px;
+	background: white;
+	transition: all 0.4s;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.45);
+	transform: scale(1);
+}
+.container:hover{
+	transition: all 0.4s;
+	box-shadow: 0 8px 11px rgba(0,0,0,0.5);
+	transform: scale(1.2);
+}
+body{
+	background: rgba(230,230,230,0.5);
+}
