@@ -7,6 +7,7 @@ In your webpage(for example produits.php or index.php), you just have to include
 session_start();// NEver forget this line<br>
 include ("anti_ddos/index.php"); //Systeme de protection DDOS</br>
 ?>
+<code>
 <!DOCTYPE html>
 <html>
   <head>
@@ -17,3 +18,4 @@ include ("anti_ddos/index.php"); //Systeme de protection DDOS</br>
     <!-- My Web Page -->
   </body>
 </html>
+</code>
