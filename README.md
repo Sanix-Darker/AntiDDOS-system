@@ -1,6 +1,6 @@
 # AntiDDOS-system
 A simple way to protect your web site from DDOS attack(FREELY)
-
+#This code has been tested by several deep web hackers!
 <h4> How to use it!</h4>
 In your webpage(for example produits.php or index.php), you just have to include the file index.php from anti_ddos:<br>
 <b><i><u>Note: This system only activates when it detects abnormal activity and protect immediatly your website/server</u></i></b>
