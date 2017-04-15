@@ -19,7 +19,7 @@ Posted @ http://www.w3tools.info/2011/12/anti-ddos-php-script.html
  
  $ad_source = file("{$ad_dir}/{$ad_black_file}");
  $ad_source = explode(',', implode(',',$ad_source));
- if(in_array($ad_ip, $ad_source)) {die();} //'<br><br><center><h3>Systeme de protection DDOS de JeBiss activ&eacute;!</h3>'
+ if(in_array($ad_ip, $ad_source)) {die();} //'<br><br><center><h3>Systeme de protection DDOS!</h3>'
  
  $ad_source = file("{$ad_dir}/{$ad_white_file}");
  $ad_source = explode(',',implode(',',$ad_source));
@@ -117,7 +117,7 @@ Posted @ http://www.w3tools.info/2011/12/anti-ddos-php-script.html
 				}
 			</style>
 			<nav><center>
-				<h3>Systeme de protection DDOS de Jebiss.</h3>
+				<h3>Systeme de protection DDOS By S@n1x D4rk3r.</h3>
 				<form method="post" name="<?=$nom_form; ?>">
 					<input type="hidden" name="<?=$_SESSION['variable_du_form']; ?>" value="JnYHSNp">
 					<img height="130" width="400" src="anti_ddos/securitecode.php"><br>
