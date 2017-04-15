@@ -1,6 +1,7 @@
 <?php
 /*
-Posted @ http://www.w3tools.info/2011/12/anti-ddos-php-script.html
+index.php // The file you need to include i =n your projects
+By S@n1X D4rk3r
 */
  
  $ad_ddos_query = 5;// ​​number of requests per second to detect DDOS attacks
