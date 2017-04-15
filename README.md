@@ -32,4 +32,4 @@ In your webpage(for example produits.php or index.php), you just have to include
 <./html><br>
 
 NB:Remove the "." in the begining of tags, all br tags and nbsp code before use it!!!<br>
-<img src="ddos.PNG">
+<img src="ddos_.PNG">
