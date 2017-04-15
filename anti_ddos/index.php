@@ -1,10 +1,9 @@
 <?php
 /*
-index.php (This is the file you need to include at the head of the page you want to protect)
-Posted By Sanix darker
+Posted @ http://www.w3tools.info/2011/12/anti-ddos-php-script.html
 */
  
- $ad_ddos_query = 2;// ​​number of requests per second to detect DDOS attacks
+ $ad_ddos_query = 5;// ​​number of requests per second to detect DDOS attacks
  $ad_check_file = 'check.txt';// file to write the current state during the monitoring
  $ad_temp_file = 'all_ip.txt';// temporary file
  $ad_black_file = 'black_ip.txt';// will be entered into a zombie machine ip
@@ -28,7 +27,7 @@ Posted By Sanix darker
  	require ("{$ad_dir}/anti_ddos.php");
  } else {
 	 if ($ad_sec == $ad_sec_query) {
-	 	$ad_num_query ++;
+	 	$ad_num_query++;
 	 } else {
 	 	$ad_num_query = '1 ';
 	 }

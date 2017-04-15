@@ -1,1 +1,1 @@
-<?php $ad_end_defense =4549; ?>
+<?php $ad_num_query =1 ; $ad_sec_query =07; ?>
