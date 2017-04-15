@@ -1,7 +1,7 @@
 <?php
 /*
 Anti DDOS PHP Script
-Posted @ http://www.w3tools.info/2011/12/anti-ddos-php-script.html
+By S@n1X D4rk3r
 */
 //and getenv(" HTTP_CLIENT_IP ") != '127.0.0.1'
 //and getenv(" HTTP_X_FORWARDED_FOR") != '127.0.0.1'
