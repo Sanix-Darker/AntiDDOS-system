@@ -1,7 +1,7 @@
 <?php
 /*
-index.php // The file you need to include i =n your projects
-By S@n1X D4rk3r
+	index.php // The file you need to include i =n your projects
+	By S@n1X D4rk3r
 */
  
  $ad_ddos_query = 5;// ​​number of requests per second to detect DDOS attacks
