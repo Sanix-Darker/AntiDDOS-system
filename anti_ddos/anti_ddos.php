@@ -1,7 +1,7 @@
 <?php
 /*
-Anti DDOS PHP Script
-By S@n1X D4rk3r
+* Anti DDOS PHP Script
+* By S@n1X D4rk3r
 */
 //and getenv(" HTTP_CLIENT_IP ") != '127.0.0.1'
 //and getenv(" HTTP_X_FORWARDED_FOR") != '127.0.0.1'
@@ -17,9 +17,8 @@ By S@n1X D4rk3r
  }
  $ad_ip = getIP();
  
- $ad_source = file("{$ad_dir}/{$ad_black_file}");
- $ad_source = explode(',', implode(',',$ad_source));
- if(in_array($ad_ip, $ad_source)) {die();} //'<br><br><center><h3>Systeme de protection DDOS!</h3>'
+ $ad_source = file("{$ad_dir}/{$ad_black_file}"); $ad_source = explode(',', implode(',',$ad_source));
+ if(in_array($ad_ip, $ad_source)) {die();}
  
  $ad_source = file("{$ad_dir}/{$ad_white_file}");
  $ad_source = explode(',',implode(',',$ad_source));
@@ -39,27 +38,13 @@ By S@n1X D4rk3r
 		 ?>
 		<style type="text/css">
 			nav{
-			    background:red url(/alerticon.png) left no-repeat; 
-			    background-position: 15px; 
-			    color: white;
-			    text-align:center;
-			    position: fixed;
-			    top:30%;
-			    left:0;
-			    width: 100%;
+			    background:red url(/alerticon.png) left no-repeat;  background-position: 15px;  color: white; text-align:center; position: fixed; top:30%;  left:0; width: 100%;
 			}
 			.code{
-				padding: 7px;
-				font-size: 23px;
+				padding: 7px; font-size: 23px;
 			}
 			.clickmoi{
-				border: 0px;
-				padding: 10px;
-				font-size: 23px;
-				border-radius:2px;
-				color:white;
-				background: blue;
-				cursor: pointer;
+				border: 0px; padding: 10px; font-size: 23px; border-radius:2px; color:white; background: blue; cursor: pointer;
 			}
 		</style>
 		<nav><center>
