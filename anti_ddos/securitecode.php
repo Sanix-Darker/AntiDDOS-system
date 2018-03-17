@@ -1,16 +1,21 @@
 <?php
+
+  /**
+   * FILE: securitecode.php
+   * This code generate a random code / capcha to verify if it's a human on board or not
+   */
+
   session_start();
   $largeur  = 120;
   $hauteur  = 40;
   $longueur = 6;
-  $liste = '134679ACEFGHIJLMNPRTUVWXY';
+  $liste = '134679ACEFGHIJLMNPRTUVWXY@%$&';
   $code    = '';
   $counter = 0;
   $image = @imagecreate($largeur, $hauteur) or die('Impossible d\'initializer GD');
-  for( $i=0; $i<10; $i++ ) 
-  {
+  for( $i=0; $i<10; $i++ )
      imageline($image,mt_rand(0,$largeur), mt_rand(0,$hauteur),mt_rand(0,$largeur), mt_rand(0,$hauteur),imagecolorallocate($image, mt_rand(200,255),mt_rand(200,255),mt_rand(200,255)));
-  }
+
   for( $i=0, $x=0; $i<$longueur; $i++ ) 
   {
      $charactere = substr($liste, rand(0, strlen($liste)-1), 1);
@@ -24,4 +29,5 @@
   imagejpeg($image);
   imagedestroy($image);
   $_SESSION['securecode'] = $code;
-  ?>
+  
+?>
