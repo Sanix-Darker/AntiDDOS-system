@@ -9,6 +9,16 @@
 //and getenv(" HTTP_CLIENT_IP ") != '127.0.0.1'
 //and getenv(" HTTP_X_FORWARDED_FOR") != '127.0.0.1'
 
+	function getFromfile_source($type){
+		if($type == "black"){
+			return explode(',', implode(',',file("{$ad_dir}/{$ad_black_file}")));
+		}else if($type == "white"){
+			return explode(',', implode(',',file("{$ad_dir}/{$ad_white_file}")));
+		}else{
+			return explode(',', implode(',',file("{$ad_dir}/{$ad_temp_file}")));
+		}
+	}
+
 	$ad_ip = "";
 	if(getenv("HTTP_CLIENT_IP") and preg_match("/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\z/", getenv(" HTTP_CLIENT_IP "))) {
 		$ad_ip = getenv("HTTP_CLIENT_IP");
@@ -17,15 +27,14 @@
 	}
 	else { $ad_ip = getenv("REMOTE_ADDR"); }
 	 
-	 $ad_source = file("{$ad_dir}/{$ad_black_file}"); $ad_source = explode(',', implode(',',$ad_source));
+	 $ad_source = getFromfile_source('black');
 	 if(in_array($ad_ip, $ad_source)) {die();}
 	 
-	 $ad_source = file("{$ad_dir}/{$ad_white_file}");
-	 $ad_source = explode(',',implode(',',$ad_source));
+	 $ad_source = getFromfile_source('white');
 	 if(!in_array($ad_ip, $ad_source)) {
 	 
-		 $ad_source = file("{$ad_dir}/{$ad_temp_file}");
-		 $ad_source = explode(',',implode(',',$ad_source));
+		 $ad_source = getFromfile_source('temp');
+
 		 if(!in_array($ad_ip, $ad_source)) {
 		 	$_SESSION['nbre_essai']=3;
 			 $ad_file = fopen("{$ad_dir}/{$ad_temp_file}", "a+");

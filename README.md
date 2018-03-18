@@ -1,10 +1,7 @@
 
-<center>
-	<img src="img/icon.png" style="width: 100%;">
-
-	# AntiDDOS-system
-	A simple way to protect your web application from DDOS attack(FREELY) in 2 lines
-</center>
+<img src="img/icon.png" >
+#AntiDDOS-system
+A simple way to protect your web application from DDOS attack(FREELY) in 2 lines
 
 <h2>This code has been tested by severals hackers and ddos software with a score of 78.351%</h2>
 <h4> How to use it!</h4>

@@ -26,7 +26,6 @@
           );
   }
 
-
   for( $i=0, $x=0; $i<$longueur; $i++ ) 
   {
      $charactere = substr($liste, rand(0, strlen($liste)-1), 1);

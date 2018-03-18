@@ -7,7 +7,6 @@
  */
 
 include('config.php');
-
  
 require ("{$ad_dir}/{$ad_check_file}");
 
