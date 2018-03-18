@@ -13,8 +13,19 @@
   $code    = '';
   $counter = 0;
   $image = @imagecreate($largeur, $hauteur) or die('Impossible d\'initializer GD');
-  for( $i=0; $i<10; $i++ )
-     imageline($image,mt_rand(0,$largeur), mt_rand(0,$hauteur),mt_rand(0,$largeur), mt_rand(0,$hauteur),imagecolorallocate($image, mt_rand(200,255),mt_rand(200,255),mt_rand(200,255)));
+  for( $i=0; $i<10; $i++ ){
+         imageline($image,
+          mt_rand(0,$largeur), 
+            mt_rand(0,$hauteur),
+              mt_rand(0,$largeur), 
+                mt_rand(0,$hauteur),
+                  imagecolorallocate($image, mt_rand(200,255),
+                    mt_rand(200,255),
+                    mt_rand(200,255)
+                  )
+          );
+  }
+
 
   for( $i=0, $x=0; $i<$longueur; $i++ ) 
   {
