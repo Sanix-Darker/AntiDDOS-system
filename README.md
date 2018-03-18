@@ -1,9 +1,9 @@
 
 <img src="img/icon.png" >
-#AntiDDOS-system
+<h2>AntiDDOS-system</h2>
 A simple way to protect your web application from DDOS attack(FREELY) in 2 lines
 
-<h2>This code has been tested by severals hackers and ddos software with a score of 78.351%</h2>
+<h3>The code has been tested by severals ddos software with a score of 78.351%</h3>
 <h4> How to use it!</h4>
 In your webpage(for example produits.php or index.php), you just have to include the file index.php from anti_ddos:<br>
 <b><i><u>Note: This system only activates when it detects abnormal activity and protect immediatly your PHP application</u></i></b>
@@ -18,3 +18,4 @@ In your webpage(for example produits.php or index.php), you just have to include
 ```
 
 <img src="img/ddos_.PNG">
+Send me feedback to make this project more powerfull than ever! ;-)
