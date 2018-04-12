@@ -7,7 +7,7 @@
 		<form method="post" name="<?=$nom_form; ?>">
 			<input type="hidden" name="<?=$_SESSION['variable_du_form']; ?>" value="JnYHSNp">
 			<img height="130" width="400" src="anti_ddos/securitecode.php"><br>
-			<h2>Il vous reste <?=($_SESSION['nbre_essai']+1); ?> essai(s)</h2>
+			<h2> you have <?=($_SESSION['nbre_essai']+1); ?> tries left(s)</h2>
 			<input type="text" name="valCAPTCHA" class="code" placeholder="Entrez le code ici.">
 			<input type="button" class="clickmoi" onclick="go()" value="Me verifier">
 		</form>

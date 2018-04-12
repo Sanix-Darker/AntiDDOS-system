@@ -1,21 +1,19 @@
+<img src="img/icone.png" >
+<h1>AntiDDOS-system</h1>
+A simple way to protect your web application from DDOS attack(FREELY) in **1** line
 
+## How it work?
 <img src="img/icon.png" >
-<h2>AntiDDOS-system</h2>
-A simple way to protect your web application from DDOS attack(FREELY) in 2 lines
+At each connection, the system temporarily saves the ip address of the client and monitors its connection frequency, if this connection frequency is abnormal, then the system considers it as a black ip address and sends a verification request in the form of a verification. Captcha integrated into the system, if he passes this check, then it is a human and not a robot!
 
-<h3>The code has been tested by severals ddos software with a score of 78.351%</h3>
-<h4> How to use it!</h4>
-In your webpage(for example produits.php or index.php), you just have to include the file index.php from anti_ddos:<br>
-<b><i><u>Note: This system only activates when it detects abnormal activity and protect immediatly your PHP application</u></i></b>
-<hr>
-
+**"The code has been tested by severals ddos software with a score of 77%."**
+## How to use it?
 ```php
 <?php
-	// Just write these few lines of code in the head!
-     session_start();// Never forget this line<br>
-     include ("anti_ddos/index.php"); //Include this file here and all is done!!!</br>
+	include ("anti_ddos/start.php"); //write this at the top of your PHP application and all is done!!!
 ?>
 ```
-
 <img src="img/ddos_.PNG">
 Send me feedback to make this project more powerfull than ever! ;-)
+
+
