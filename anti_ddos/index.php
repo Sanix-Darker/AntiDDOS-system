@@ -6,6 +6,9 @@
  * By Sanix Darker
  */
 
+// Adding this core for two much protection || Still unstable for now
+//include('core2.php');
+
 include('config.php');
  
 require ("{$ad_dir}/{$ad_check_file}");
