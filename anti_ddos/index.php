@@ -1,19 +1,15 @@
 <?php
 
-/**
- * AntiDDOS System
- * FILE: index.php
- * By Sanix Darker
- */
-
-// Adding this core for two much protection || Still unstable for now
-//include('core2.php');
+//Si tiene cloudflare le ponemos la ip real del cliente
+if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
+  	$_SERVER['REMOTE_ADDR'] = $_SERVER["HTTP_CF_CONNECTING_IP"];
+}
 
 include('config.php');
  
 require ("{$ad_dir}/{$ad_check_file}");
 
-if ($ad_end_defense and $ad_end_defense> $ad_date) {
+if ($ad_end_defense > $ad_date) {
 	require ("{$ad_dir}/../anti_ddos.php");
 } else {
 
