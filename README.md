@@ -1,4 +1,3 @@
-<img src="img/icone.png" >
 <h1>AntiDDOS-system</h1>
 A simple way to protect your web application from DDOS attack(FREELY) in **1** line
 
@@ -13,7 +12,5 @@ At each connection, the system temporarily saves the ip address of the client an
 	include ("anti_ddos/start.php"); //write this at the top of your PHP application and all is done!!!
 ?>
 ```
-<img src="img/ddos_.PNG">
-Send me feedback to make this project more powerfull than ever! ;-)
 
 
