@@ -4,8 +4,9 @@
    * FILE: securitecode.php
    * This code generate a random code / capcha to verify if it's a human on board or not
    */
-
-  session_start();
+  if(!isset($_SESSION)){
+    session_start();
+  }
   $largeur  = 120;
   $hauteur  = 40;
   $longueur = 6;
