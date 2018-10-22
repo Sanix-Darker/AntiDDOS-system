@@ -1,0 +1,17 @@
+.container{
+	margin-top: 135px;
+	max-width: 550px;
+	text-align: center;
+	padding: 10px;
+	padding-top: 25px;
+	background: white;
+	transition: all 0.4s;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.45);
+}
+.container:hover{
+	transition: all 0.4s;
+	box-shadow: 0 7px 10px rgba(0,0,0,0.45);
+}
+body{
+	background: rgba(230,230,230,0.5);
+}

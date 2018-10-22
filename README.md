@@ -9,6 +9,8 @@ At each connection, the system temporarily saves the ip address of the client an
 ### Stand By Checking...
 <img src="img/StandBy.PNG">
 
+### Example on testing...
+<img src="img/Antiddos.gif">
 
 **"The code has been tested by severals ddos software with a score of 77%."**
 ## How to use it?
