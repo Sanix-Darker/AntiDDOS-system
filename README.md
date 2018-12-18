@@ -35,6 +35,14 @@ At each connection, the system temporarily saves the ip address of the client an
 ?>
 ```
 <img src="img/ddos_.PNG">
+
+## Author
+
+- [Sanix-darker](https://github.com/sanix-darker)
+
+## LICENSE
+
+[MIT License](https://github.com/Sanix-Darker/API_SMS/blob/master/LICENSE)
 Send me feedback to make this project more powerfull than ever! ;-)
 
 
