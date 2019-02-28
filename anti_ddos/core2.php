@@ -34,21 +34,15 @@
       AppendToFile($iplogdir.$iplogfile);
       $fp = fopen($iplogdir.$iplogfile, "a");
       $yourdomain = $_SERVER['HTTP_HOST'];
-         if ($fp)
-         {
-         $useragent = "<unknown user agent>";
-         if (isset($_SERVER["HTTP_USER_AGENT"])) $useragent = $_SERVER["HTTP_USER_AGENT"];
-         fputs($fp, $_SERVER["REMOTE_ADDR"]." ".date("d/m/Y H:i:s")." ".$useragent."\n");
-         fclose($fp);
-         $yourdomain = $_SERVER['HTTP_HOST'];
-         
-        
-         }
-         exit();
+         if ($fp){
+          $useragent = "<unknown user agent>";
+          if (isset($_SERVER["HTTP_USER_AGENT"])) $useragent = $_SERVER["HTTP_USER_AGENT"];
+          fputs($fp, $_SERVER["REMOTE_ADDR"]." ".date("d/m/Y H:i:s")." ".$useragent."\n");
+          fclose($fp);
+          $yourdomain = $_SERVER['HTTP_HOST'];
+        }exit();
   }
   else $_SESSION['reportedflood'] = 0;
   
   AppendToFile($iplogdir.$ipfile, $newtime);
-   
- 
 ?>
