@@ -1,15 +1,37 @@
 <?php
+
+  function getIp() {
+    $ip = $_SERVER['REMOTE_ADDR']; 
+    if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+      $ip = $_SERVER['HTTP_CLIENT_IP']; 
+    } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+      $ip = $_SERVER['HTTP_X_FORWARDED_FOR']; 
+    } 
+    return $ip;
+  }
+  function getOS() { 
+    if (PHP_OS == 'WINNT'){
+      return "Windows"; 
+    }
+    if (PHP_OS == 'Linux'){
+      return "Linux"; 
+    }
+  }
+
   $cookie = "AntiDDosBySanixDarker";
   $othercookie = 'AnotherAntiDDos';
-  if($cookie && $othercookie > 0) $iptime = 20;
-  else $iptime = 10;
+  if($cookie && $othercookie > 0) 
+    $iptime = 20;
+  else 
+    $iptime = 10;
+  
   $ippenalty = 60;
-  if($cookie && $othercookie > 0)$ipmaxvisit = 30; 
-  else $ipmaxvisit = 20;
-  function getIp() {
-      $ip = $_SERVER['REMOTE_ADDR']; if (!empty($_SERVER['HTTP_CLIENT_IP'])) {$ip = $_SERVER['HTTP_CLIENT_IP']; } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {$ip = $_SERVER['HTTP_X_FORWARDED_FOR']; } return $ip;
-  }
-  function getOS() { if (PHP_OS == 'WINNT'){$os = "Windows"; return $os; } if (PHP_OS == 'Linux'){$os = "Linux"; return $os; } }
+  
+  if($cookie && $othercookie > 0)
+    $ipmaxvisit = 30; 
+  else 
+    $ipmaxvisit = 20;
+
   $user_ip = getIp();
   $user_os = getOS();
   $iplogdir = "files/";
@@ -17,12 +39,12 @@
   $ipfile = substr(md5($_SERVER["REMOTE_ADDR"]), -2);
   
   $oldtime = 0;
-  if (file_exists($iplogdir.$ipfile)) $oldtime = filemtime($iplogdir.$ipfile);
-    $time = time();
+  if (file_exists($iplogdir.$ipfile))
+    $oldtime = filemtime($iplogdir.$ipfile);
+  $time = time();
   if ($oldtime < $time) $oldtime = $time;
     $newtime = $oldtime + $iptime;
-  if ($newtime >= $time + $iptime*$ipmaxvisit)
-  {
+  if ($newtime >= $time + $iptime*$ipmaxvisit){
       AppendToFile($iplogdir.$ipfile, $time + $iptime*($ipmaxvisit-1) + $ippenalty);
       $oldref = $_SERVER['HTTP_REFERER'];
       header("HTTP/1.0 503 Service Temporarily Unavailable");

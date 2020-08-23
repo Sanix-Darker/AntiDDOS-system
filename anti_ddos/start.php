@@ -11,7 +11,6 @@ if(!isset($_SESSION)){
 if(isset($_SESSION['standby'])){
 
 	// There is all your configuration
-
 	$_SESSION['standby'] = $_SESSION['standby']+1;
 
 	$ad_ddos_query = 5;// ​​number of requests per second to detect DDOS attacks
@@ -24,14 +23,13 @@ if(isset($_SESSION['standby'])){
 	$ad_num_query = 0;// ​​current number of requests per second from a file $check_file
 	$ad_sec_query = 0;// ​​second from a file $check_file
 	$ad_end_defense = 0;// ​​end while protecting the file $check_file
-	$ad_sec = date ("s");// current second
-	$ad_date = date ("is");// current time
+	$ad_sec = date("s");// current second
+	$ad_date = date("is");// current time
 	$ad_defense_time = 100;// ddos ​​attack detection time in seconds at which stops monitoring
 		
 
 	$config_status = "";
 	function Create_File($the_path){
-
 		$handle = fopen($the_path, 'w') or die('Cannot open file:  '.$the_path);
 		return "Creating ".$the_path." .... done";
 	}
@@ -59,7 +57,6 @@ if(isset($_SESSION['standby'])){
 								die($config_status);
 	}
 
-
 	// TO verify the session start or not
 	require ("{$ad_dir}/{$ad_check_file}");
 
@@ -70,12 +67,14 @@ if(isset($_SESSION['standby'])){
 		$ad_num_query = ($ad_sec == $ad_sec_query) ? $ad_num_query++ : '1 ';
 		$ad_file = fopen ("{$ad_dir}/{$ad_check_file}", "w");
 
-		$ad_string = ($ad_num_query >= $ad_ddos_query) ? '<?php $ad_end_defense ='.($ad_date + $ad_defense_time).'; ?>' : '<?php $ad_num_query ='. $ad_num_query. '; $ad_sec_query ='. $ad_sec. '; ?>';
+		$ad_string = ($ad_num_query >= $ad_ddos_query) ? '<?php $ad_end_defense ='.
+															ltrim(($ad_date + $ad_defense_time), "0")
+														.'; ?>' : '<?php $ad_num_query ='.ltrim($ad_num_query, "0")
+														. '; $ad_sec_query ='. ltrim($ad_sec, "0") . '; ?>';
 
 		fputs ($ad_file, $ad_string);
 		fclose ($ad_file);
 	}
-
 }else{
 
 		$_SESSION['standby'] = 1;
@@ -84,7 +83,13 @@ if(isset($_SESSION['standby'])){
 		header("refresh:8,".$actual_link);
 	?>
 		<style type="text/css">
-		.loading {display: flex; flex-direction: column; align-items: center; } .loading__msg {font-family: Roboto; font-size: 16px; } .loading__dots {display: flex; flex-direction: row; width: 100%; justify-content: center; margin: 100px 0 30px 0; } .loading__dots__dot {background-color: #44BBA4; width: 20px; height: 20px; border-radius: 50%; margin: 0 5px; color: #587B7F; } .loading__dots__dot:nth-child(1) {animation: bounce 1s 1s infinite; } .loading__dots__dot:nth-child(2) {animation: bounce 1s 1.2s infinite; } .loading__dots__dot:nth-child(3) {animation: bounce 1s 1.4s infinite; } @keyframes bounce {0% {transform: translate(0, 0); } 50% {transform: translate(0, 15px); } 100% {transform: translate(0, 0); } }
+			.loading {display: flex; flex-direction: column; align-items: center; } 
+			.loading__msg {font-family: Roboto; font-size: 16px; } 
+			.loading__dots {display: flex; flex-direction: row; width: 100%; justify-content: center; margin: 100px 0 30px 0; } 
+			.loading__dots__dot {background-color: #44BBA4; width: 20px; height: 20px; border-radius: 50%; margin: 0 5px; color: #587B7F; } 
+			.loading__dots__dot:nth-child(1) {animation: bounce 1s 1s infinite; } 
+			.loading__dots__dot:nth-child(2) {animation: bounce 1s 1.2s infinite; } 
+			.loading__dots__dot:nth-child(3) {animation: bounce 1s 1.4s infinite; } @keyframes bounce {0% {transform: translate(0, 0); } 50% {transform: translate(0, 15px); } 100% {transform: translate(0, 0); } }
 		</style>
 	<div class="loading" style="margin-top: 11%;">
 		<div class="loading__dots">
@@ -92,7 +97,16 @@ if(isset($_SESSION['standby'])){
 		<div class="loading__dots__dot"></div>
 		<div class="loading__dots__dot"></div>
 		</div>
-		<div class="loading__msg"><center><b style="font-size: 22px;"><a href="https://github.com/Sanix-Darker/AntiDDOS-system" target="_blank" style="color: black;">ANTIDDOS</a> is checking....</b><br><br>Hi, don't worry, this is a simple security verfication, you will see this only one time;<br> your webpage will show up soon!<br> This security wall was build by <a href="https://github.com/sanix-darker" target="_blank">Sanix darker</a> </center></div>
+		<div class="loading__msg">
+			<center>
+				<b style="font-size: 22px;">
+					<a href="https://github.com/Sanix-Darker/AntiDDOS-system" target="_blank" style="color: black;">ANTIDDOS</a> is checking....
+				</b>
+				<br><br>
+			Hi, don't worry, this is a simple security verfication, 
+			you will see this only one time;<br> your webpage will show up soon!
+			 <br> This security wall was build by 
+			 <a href="https://github.com/sanix-darker" target="_blank">Sanix darker</a> </center></div>
 	</div>
 
 <?php exit();

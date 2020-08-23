@@ -15,14 +15,6 @@ function getFromfile_source($type){
 	$ad_dir = 'anti_ddos/files';// directory with scripts
 
 	return ($type == "black") ? explode(',', implode(',',file("{$ad_dir}/{$ad_black_file}"))) : ( ($type == "white") ? explode(',', implode(',',file("{$ad_dir}/{$ad_white_file}"))) : explode(',', implode(',',file("{$ad_dir}/{$ad_temp_file}"))) ) ;
-
-	// if($type == "black"){
-	// 	return explode(',', implode(',',file("{$ad_dir}/{$ad_black_file}")));
-	// }else if($type == "white"){
-	// 	return explode(',', implode(',',file("{$ad_dir}/{$ad_white_file}")));
-	// }else{
-	// 	return explode(',', implode(',',file("{$ad_dir}/{$ad_temp_file}")));
-	// }
 }
 
 $ad_ip = "";
@@ -30,12 +22,6 @@ $ad_ip = "";
 //and getenv(" HTTP_CLIENT_IP ") != '127.0.0.1'
 //and getenv(" HTTP_X_FORWARDED_FOR") != '127.0.0.1'
 
-// if(getenv("HTTP_CLIENT_IP") and preg_match("/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\z/", getenv(" HTTP_CLIENT_IP "))) {
-// 	$ad_ip = getenv("HTTP_CLIENT_IP");
-// } elseif(getenv("HTTP_X_FORWARDED_FOR") and preg_match("/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\z/", getenv(" HTTP_X_FORWARDED_FOR "))) {
-// 	$ad_ip = getenv("HTTP_X_FORWARDED_FOR");
-// }else { $ad_ip = getenv("REMOTE_ADDR"); }
- 
 $ad_ip = (getenv("HTTP_CLIENT_IP") and preg_match("/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\z/", getenv(" HTTP_CLIENT_IP "))) ? getenv("HTTP_CLIENT_IP") : ( (getenv("HTTP_X_FORWARDED_FOR") and preg_match("/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\z/", getenv(" HTTP_X_FORWARDED_FOR "))) ? getenv("HTTP_X_FORWARDED_FOR") : getenv("REMOTE_ADDR"));
 
 $ad_source = getFromfile_source('black');

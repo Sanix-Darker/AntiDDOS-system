@@ -19,7 +19,6 @@
 
 $config_status = "";
 function Create_File($the_path){
-
 	$handle = fopen($the_path, 'w') or die('Cannot open file:  '.$the_path);
 	return "Creating ".$the_path." .... done";
 }
@@ -57,4 +56,3 @@ if (!file_exists("{$ad_dir}/{$ad_check_file}") or
 	 						$config_status .= "Some files does'nt exist!";
 	 						die($config_status);
 }
-

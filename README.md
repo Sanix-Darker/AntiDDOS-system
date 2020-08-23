@@ -48,6 +48,7 @@ At each connection, the system temporarily saves the ip address of the client an
 		//Print out the exception message.
 		//echo $ex->getMessage();
 	}
+	// cp -r AntiDDOS-system/ /var/www/html/
 ?>
 ---- THE HTML PAGE CONTENT ----
 ```
