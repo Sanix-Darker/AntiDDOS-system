@@ -4,9 +4,10 @@
  * FILE: index.php
  * By Sanix Darker
  */
-error_reporting(E_ALL);
-ini_set('display_errors', 'On');
-
+function safe_print($value){
+	$value += "";
+	return strlen($value) > 1 && (strpos($value, "0") !== false) ? ltrim($value, "0") : (strlen($value) == 0 ? "0" : $value);
+}
 if(!isset($_SESSION)){
 	session_start();
 }
@@ -65,10 +66,10 @@ if(isset($_SESSION['standby'])){
 	if ($ad_end_defense and $ad_end_defense> $ad_date) {
 		require ("{$ad_dir}/../anti_ddos.php");
 	} else {
-		$ad_num_query = ($ad_sec == $ad_sec_query) ? $ad_num_query++ : '1';
+		$ad_num_query = ($ad_sec == $ad_sec_query) ? $ad_num_query++ : '1 ';
 		$ad_file = fopen ("{$ad_dir}/{$ad_check_file}", "w");
 
-		$ad_string = ($ad_num_query >= $ad_ddos_query) ? '<?php $ad_end_defense='.ltrim(($ad_date + $ad_defense_time), "0").'; ?>' : '<?php $ad_num_query='.(($ad_num_query == "0" || $ad_num_query == "00") ? "0" : ltrim($ad_num_query, "0")).'; $ad_sec_query='.(($ad_sec == "0" || $ad_sec == "00") ? "0" : ltrim($ad_sec, "0")).'; ?>';
+		$ad_string = ($ad_num_query >= $ad_ddos_query) ? '<?php $ad_end_defense='.safe_print($ad_date + $ad_defense_time).'; ?>' : '<?php $ad_num_query='. safe_print($ad_num_query) .'; $ad_sec_query='. safe_print($ad_sec) .'; ?>';
 
 		fputs ($ad_file, $ad_string);
 		fclose ($ad_file);
