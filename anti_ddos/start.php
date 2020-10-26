@@ -5,7 +5,7 @@
  * By Sanix Darker
  */
 function safe_print($value){
-	$value += "";
+	$value .= "";
 	return strlen($value) > 1 && (strpos($value, "0") !== false) ? ltrim($value, "0") : (strlen($value) == 0 ? "0" : $value);
 }
 if(!isset($_SESSION)){
