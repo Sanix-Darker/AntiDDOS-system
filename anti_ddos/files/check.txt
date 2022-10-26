@@ -1,1 +1,0 @@
-<?php $ad_num_query=1 ; $ad_sec_query=13; ?>
