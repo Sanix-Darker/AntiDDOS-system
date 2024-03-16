@@ -1,3 +1,5 @@
+# THIS PROJECT IS DEPRECATED AND I DON'T MAINTAIN IT ANYMORE, PLEASE REFERS TO MODERNS SOLUTIONS INSTEAD
+
 <img src="img/icone.png" >
 <h1>AntiDDOS-system</h1>
 A simple way to protect your web application from DDOS attack(FREELY) in *1 line*.
